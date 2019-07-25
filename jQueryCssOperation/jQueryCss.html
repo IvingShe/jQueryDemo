@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>JQuery Css 类操作</title>
+        <style>  
+         #box{
+           border: solid 2px red;
+         }
+         #wrapper{          
+           margin: 100px auto;
+           width: 600px;
+           border:solid 2px red;
+           padding: 20px;
+           
+
+         }
+         #content{
+           width:400px; 
+           height:300px; 
+           border:2px dotted orange;
+         }
+        </style>
+        
+</head>       
+    <body>
+     <h1>JQuery Css 类操作</h1>    
+
+     <hr>
+      <ul>
+        <li>css属性操作：获取属性，设置属性，利用对象设置属性</li>
+        <li>css位置操作： offset 和 position</li>
+        <li><a href="./jQueryCssScale.html" target="blank">css尺寸操作</a></li>
+
+      </ul>
+
+
+
+     <div id="box"> 
+       
+     </div>
+
+     <div id ="wrapper"> 
+       <div id="content"></div>   
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>    
+    $(function(){
+        console.log("ready---");
+        /****part1:属性操作*****/
+        // // //获取css属性值 ；
+        //  console.log("ready---"+  $("#box").css("border"));      
+        //  //设置属性值 ；
+        //  $("#box").css("widh","500px").css("height","200px").html("fdsafdsafdasfasdfasdfadsfsda");
+        //  //属性值是一个对象
+        //  $("#box").css({
+        //    "border":"solid 4px green",
+        //    "height":"500px",
+        //    "width":"300px",
+        //    "color":"red"
+        //  });
+
+        /***part2: 位置操作***/
+       console.log($("#wrapper").offset());
+       console.log($("#wrapper").offset().left);
+       console.log($("#wrapper").offset().top);
+       console.log($("#wrapper").position());
+       console.log($("#wrapper").position().left);
+       console.log($("#wrapper").position().top);
+       
+
+      $("#content").offset({
+        left: 200,
+        top: 200,
+      });
+    });
+    </script>
+    </body>
+  </html>

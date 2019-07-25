@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery子元素选择器</title>
+        <style>
+            div{
+              margin-bottom: 10px;
+            }
+            ul,ol{
+                width:350px;
+                list-style:decimal;
+            }
+            ol li{
+             color: black; 
+             height: 50px;
+            
+          }
+        </style>
+    </head>
+    
+    <body>
+        <h1>jQuery子元素选择器</h1>
+        <div>
+             我是jQuery子元素选择器
+        </div>
+       
+         <ul>
+             <li> ba la bala  </li>
+             <li> ba la bala  </li>
+             <li> ba la bala  </li>
+
+             <li> <ol>
+                 <li> only you</li>
+                 <li> only you</li>
+                 <li> only you</li>
+                 <li> only you</li>
+                 <li> only you</li>
+
+             </ol>  </li>
+             <li> ba la bala  </li>
+             <li> ba la bala  </li>
+
+             <li> ba la bala  </li>
+         </ul>
+         <hr>
+         <ul>
+                <li> hello world</li>
+                <li> hello world</li>
+                <li>  hello world</li>
+                <li>  hello world</li>
+
+         </ul>
+         <script src="../js/jquery-3.4.1.min.js"></script>
+        <script>
+            function test(){
+                console.log("test");
+            }
+            $(document).ready(function(){
+                console.log("ready");
+           // $("li:first-child").css("border", "solid  2px red");
+           // $("li:last-child").css("border", "solid  2px red");
+           // $("li:nth-child(2)").css("border", "solid  2px red");
+            $("li:nth-last-child(2)").css("border", "solid  2px red");
+            });
+        </script>
+    </body>
+</html>

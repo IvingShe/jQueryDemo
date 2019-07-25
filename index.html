@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Demo</title>
+    </head>
+    <script>
+         var box= document.querySelector("#box");
+         console.log("--box2-"+box);
+    </script>
+    <body>
+        <h1>jQuery的使用</h1>
+        <div>
+            <p id="box">测试元素选择器</p>
+        </div>
+        <script src="./js/jquery-3.4.1.min.js"></script>
+        <script>
+        /*Js 入口代码1*/
+        $(document).ready(function(){
+            console.log("--ready1---");
+        });
+        /*Js 入口代码2
+        * 两种入口代码相同
+        */        
+        $(function(){
+            console.log("--ready2---");
+            var box= document.querySelector("#box");
+            console.log("--box-"+box);
+            /*
+             1.id选择器； 
+             2. 链接调用；
+            **/
+            $("#box").html('我是 id 选择器').width(800).height(500).css("border","solid 2px").css("padding","20px");
+            $("#box").append("<p> 我是追求的p元素</p>");
+        });
+
+       
+        </script>
+    </body>
+</html>

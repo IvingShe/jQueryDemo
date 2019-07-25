@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>JQuery属性操作</title>
+        <style>      
+        </style>
+        
+</head>       
+    <body>
+     <h1>JQuery属性操作</h1>
+     <ul>
+             <li>获取属性值</li>
+             <li>设置属性值</li>
+             <li>增加自定义属性和属性值</li>
+             <li>删除属性</li>
+     </ul>
+     <hr>
+     <img src="./img/1.jpg" myattr="myAttri" title="my picture"><img>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+    
+    $(function(){
+            console.log("ready---");
+            var img= $("img");
+            //获取属性值 ；
+            console.log("src---"+img.attr("src"));
+            console.log("src2---"+img.prop("src"));
+            console.log("title---"+img.attr("title"));
+            console.log("title2---"+img.prop("title"));
+            console.log("myAttri---"+img.attr("myattr"));
+            console.log("myAttri2---"+img.prop("myattr"));
+            //设置性情值 ；
+            $("img").attr("title","hello world");
+            //增加自定义属性值；
+            $("img").attr("myTitle","custom attribute named myTitle");
+            //$("img").attr("src","./img/2.jpg");
+
+            //删除属性
+            $("img").removeAttr("myattr");
+    });
+    </script>
+    </body>
+  </html>

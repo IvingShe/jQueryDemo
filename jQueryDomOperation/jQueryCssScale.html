@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>JQuery Css 尺寸操作</title>
+        <style> 
+        #box{
+          padding: 20px;
+          border: 2px solid orange;
+          width: 200px;
+          height: 200px;
+          margin: 5px;
+        }        
+        </style>
+        
+</head>       
+<body>
+     <h1>JQuery 尺寸类操作</h1> 
+
+     <div id="box"></div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>    
+      $(document).ready(function(){
+        console.log("---ready---");
+        var box =$("#box");
+
+        box.width(300).height(500);
+
+        //1.内容宽 和高
+        console.log("---width  height---");
+        console.log(box.width(),box.height());
+
+        //1.内容+padding内容+padding 的 宽 和高
+        console.log("---innerWidth  innerHeight---");
+        console.log(box.innerWidth(),box.innerHeight());
+        //3. 内容+padding+border  的宽和高；
+        console.log("---outerWidth  outerHeight---");
+        console.log(box.outerWidth(),box.outerHeight());
+
+
+        //设置大小
+
+        box
+      });
+    </script>
+ </body>
+</html>

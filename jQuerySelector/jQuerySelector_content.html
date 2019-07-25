@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery内容选择器</title>
+        <style>
+          ul li, ol li{
+             color: black;             
+             size: 30px;
+          }
+        </style>
+    </head>
+    
+    <body>
+        <h1>jQuery内容选择器</h1>
+        <div>
+            jQuery内容选择器
+        </div>
+       
+          <ul id="firstList">  
+              <li class="myclass">adfadfdfdafdsafdaf</li>
+              <li> adfadfdfdafdsafdaf</li>
+              <li>
+                <ul>
+                  <li>hello,i am li.你好同志</li>
+                  <li>hello,i am li</li>
+                  <li>hello,i am li</li>
+                  <li>hello,i am li</li>
+                </ul>
+             </li>
+              <li>adfadfdfdafdsafdaf</li>
+              <li>adfadfdfdafdsafdaf</li>
+          </ul>
+           <hr>
+          <ol id="secondlist">
+                <li>adfadfdfdafdsafdaf</li>
+                <li>adfadfdfdafdsafdaf</li>
+                <li>adfadfdfdafdsafdaf</li>
+                <li class="myclass">adfadfdfdafdsafdaf</li>
+                <li>adfadfdfdafdsafdaf</li>
+            </ol>
+
+        
+             <p class="myclass"> afdafdfadfasdfad jkjk j;kld jaf;kld a; fjdakl fjd;ak jd;ka fjdask f</p>
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script>
+            function test(){
+                console.log("test");
+            }
+            $(document).ready(function(){
+                console.log("ready");
+
+                $("li:contains(同志)").css("border","solid 2px red");
+               
+            });
+        </script>
+    </body>
+</html>

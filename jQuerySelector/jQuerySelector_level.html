@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery层级选择器</title>
+        <style>
+          ul{
+              width:300px;
+              border: solid 2px green;
+            }
+          ul li{
+             color: aquamarine; 
+          }
+          .myclass{
+              background: grey;
+          }
+        </style>
+    </head>
+    
+    <body>
+        <h1>jQuery层级选择器</h1>
+        <div>
+             我是jQuery层级选择器
+        </div>
+       
+          <ul id="firstList">  
+              <li class="myclass">adfadfdfdafdsafdaf</li>
+              <li>adfadfdfdafdsafdaf</li>
+              <li>adfadfdfdafdsafdaf</li>
+              <li>adfadfdfdafdsafdaf</li>
+              <ul>
+                  <li>hello ,i am in list</li>
+                  <li>hello ,i am in list</li>
+                  <li>hello ,i am in list</li>
+                  <li>hello ,i am in list</li>
+                  <li>hello ,i am in list</li>
+              </ul>
+              <li>adfadfdfdafdsafdaf</li>
+          </ul>
+           <hr>
+          <ul id="secondlist">
+                <li>adfadfdfdafdsafdaf</li>
+                <li>adfadfdfdafdsafdaf</li>
+                <li>adfadfdfdafdsafdaf</li>
+                <li class="myclass">adfadfdfdafdsafdaf</li>
+                <li>adfadfdfdafdsafdaf</li>
+            </ul>
+
+        
+             <p class="myclass"> afdafdfadfasdfad jkjk j;kld jaf;kld a; fjdakl fjd;ak jd;ka fjdask f</p>
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script>
+              //1.后代元素
+             //$("#firstList li").css("color","red");
+
+             //2.子元素
+             //$("#firstList>li").css("color","red");
+
+            //2.紧邻元素
+            //$(".myclass+li").css("color","red");
+            
+             //2.紧邻兄弟元素
+            $(".myclass~li").css("color","red");
+        </script>
+    </body>
+</html>

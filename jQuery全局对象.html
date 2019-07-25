@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery全局对象</title>
+    </head>
+
+    <body>
+        <h1>jQuery全局对象</h1>
+        <div id="div">
+            <p id="box">测试元素选择器</p>
+        </div>
+        <script src="./js/jquery-3.4.1.min.js"></script>
+        <script>
+        /*Js 入口代码1: jQuery的别名使用jQuery全局对象替换*/
+         //1.jQuery 功能1：原生对象转换为jQuery对象；
+        jQuery(document).ready(function(){
+            console.log("--ready---");
+            console.log(jQuery);
+            console.log($);
+            console.log($===jQuery);
+            console.log($==jQuery);
+            //2.jQuery 功能2：选择器；
+            jQuery("h1").css("color","red");
+            jQuery("<p>").html("我是对象jQuery对象创建的标签p").appendTo("#div");
+
+        });     
+       
+        </script>
+        <script>
+            var box= document.querySelector("#box");
+            console.log("--box2-"+box);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery属性选择器</title>
+        <style>
+            div{
+              margin-bottom: 10px;
+            }
+         img{
+             color: black; 
+             height: 300px;
+            
+          }
+        </style>
+    </head>
+    
+    <body>
+        <h1>jQuery属性选择器</h1>
+        <div>
+             我是jQuery属性选择器
+        </div>
+       
+         <img src="./img/1.jpg">
+         <img src="./img/1.jpg" alt="hello  word">
+         <img src="./img/1.jpg" alt="hello  you">
+         <img src="./img/1.jpg" alt="balabala" title="你好">
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script>
+            function test(){
+                console.log("test");
+            }
+            $(document).ready(function(){
+                //$("img[alt='hello  word']").css("border", "solid 1px blue");
+               // $("img[title]").css("border","solid 2px green");
+               $('img[alt][title]').css("border","solid 2px red");
+               
+             
+            });
+        </script>
+    </body>
+</html>

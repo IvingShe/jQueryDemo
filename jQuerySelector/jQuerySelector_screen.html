@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery筛选选择器</title>
+        <style>
+          ul{
+              width:300px;              
+            }
+          ul li{
+             color: black; 
+             height: 50px;
+          }
+          .myclass{
+              background: grey;
+          }
+          input{
+              display: inline;
+              height: 50px;
+              margin: 5px;
+          }
+        </style>
+
+    </head>
+    
+    <body>
+        <h1>jQuery筛选选择器</h1>
+        <div>
+             我是jQuery筛选选择器
+        </div>
+       
+          <ul id="firstList">  
+              <li class="myclass">adfadfdfdafdsafdaf</li>
+              <li>adfadfdfdafdsafdaf</li>
+              <li>adfadfdfdafdsafdaf</li>
+              <li>adfadfdfdafdsafdaf</li>
+              <ul>
+                  <li id="li">hello ,i am in list</li>
+                  <li>hello ,i am in list</li>
+                  <li>hello ,i am in list</li>
+                  <li>hello ,i am in list</li>
+                  <li>hello ,i am in list</li>
+              </ul>
+              <li>adfadfdfdafdsafdaf</li>
+          </ul>
+           <hr>
+          <ul id="secondlist">
+                <li>adfadfdfdafdsafdaf</li>
+                <li>adfadfdfdafdsafdaf</li>
+                <li>adfadfdfdafdsafdaf</li>
+                <li class="myclass">adfadfdfdafdsafdaf</li>
+                <li>adfadfdfdafdsafdaf</li>
+            </ul>
+
+        
+             <p class="myclass"> afdafdfadfasdfad jkjk j;kld jaf;kld a; fjdakl fjd;ak jd;ka fjdask f</p>
+
+             <input id="input" type="text" autofocus value="我是input"></input>
+             <input type="button" value="我是input"></input>
+             <input type="password" value="我是input"></input>
+             <input type="submit" value="我是input"></input>
+             <input type="reset" value="我是input"></input>
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script>
+              
+              $(document).ready(function(){
+                  console.log("----ready---");
+
+                 // $("#firstList li").css("border","solid 2px red");
+                  $("#firstList li:first").css("border","solid 2px red");
+ ;
+                  $("#firstList li:last").css("border","solid 2px pink");
+
+
+                  $("#firstList li:eq(2)").css("border","solid 2px green")
+                  //$(":focus").css("border","solid 2px purple");
+
+                  $(":target").css("border","solid 2px purple");
+              });
+        </script>
+    </body>
+</html>
